@@ -1,0 +1,12 @@
+{
+  greeting = "Hello, ",
+  programName = "Packet receiver from modem",
+  packet = "Packet",
+  from = "From: ",
+  port = "Port: ",
+  message = "Message: ",
+  handlerOff = "Handler off",
+  portI = "Port",
+  inst1 = "Press Handler off button before exit",
+  inst2 = "The port is set via the input above, the default port is 556"
+}
