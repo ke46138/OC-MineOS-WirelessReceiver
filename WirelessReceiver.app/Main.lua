@@ -1,5 +1,3 @@
-
--- Import libraries
 local GUI = require("GUI")
 local system = require("System")
 local component = require("component")
@@ -10,18 +8,11 @@ if not component.isAvailable("modem") then
 end
 local m = component.modem
 port = 556
--- Add a new window to MineOS workspace
 local workspace, window, menu = system.addWindow(GUI.filledWindow(1, 1, 60, 20, 0xE1E1E1))
-
--- Get localization table dependent of current system language
 local localization = system.getCurrentScriptLocalization()
-
--- Add single cell layout to window
 local layout = window:addChild(GUI.layout(1, 1, window.width, window.height, 1, 1))
-
 local modemH = event.addHandler(function(e1, e2, e3, e4, e5, e6)
     if e1 == "modem_message" then
-      --GUI.alert(e3)
       window:addChild(GUI.text(2, 11, 0x000000, localization.from))
       window:addChild(GUI.text(7, 11, 0x000000, "                                                           "))
       window:addChild(GUI.text(7, 11, 0x000000, e3))
